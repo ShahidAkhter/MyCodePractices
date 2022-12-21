@@ -8,13 +8,17 @@ let twoSum = (nums, target) => {
     for (let i = 0; i < nums.length; i++) {
         // const element = nums[i];
         for (let j = 0; j < nums.length; j++) {
-            if (i===j && nums[j+1]) {
-                j=j+1
+            if (i === j && nums[j + 1]) {
+                j = j + 1
             }
             // const element = nums[j];
-            sum=nums[i]+nums[j]
-            if (sum===target) {
-                output=[i,j]
+            sum = nums[i] + nums[j]
+            if (sum == target) {
+                output = [i, j]
+                return output;
+            }
+            if (i == (nums.length - 1) && j == (nums.length - 1)) {
+                output = ["Not Found"];
                 return output;
             }
         }
