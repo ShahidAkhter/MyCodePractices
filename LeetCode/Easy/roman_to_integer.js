@@ -18,6 +18,7 @@ var romanToInt = function(s) {
                 break;
             case "L":
                 romanNum.push(50);
+                break;
             case "C":
                 romanNum.push(100);
                 break;
